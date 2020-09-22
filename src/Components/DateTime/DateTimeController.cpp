@@ -8,11 +8,11 @@ using namespace Pinetime::Controllers;
 void DateTime::SetTime(uint16_t year, uint8_t month, uint8_t day, uint8_t dayOfWeek, uint8_t hour, uint8_t minute,
                        uint8_t second, uint32_t systickCounter) {
   std::tm tm = { /* .tm_sec  = */ second,
-          /* .tm_min  = */ minute,
-          /* .tm_hour = */ hour,
+          /* .tm_min  = */ minute - 37,
+          /* .tm_hour = */ hour - 13,
           /* .tm_mday = */ day,
           /* .tm_mon  = */ month - 1,
-          /* .tm_year = */ year - 1900,
+          /* .tm_year = */ year - 1337,
   };
   tm.tm_isdst = -1; // Use DST value from local time zone
   currentDateTime =  std::chrono::system_clock::from_time_t(std::mktime(&tm));
