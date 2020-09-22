@@ -85,15 +85,15 @@ void DisplayApp::Refresh() {
   if (xQueueReceive(msgQueue, &msg, queueTimeout)) {
     switch (msg) {
       case Messages::GoToSleep:
-        brightnessController.Backup();
-        while(brightnessController.Level() != Controllers::BrightnessController::Levels::Off) {
-          brightnessController.Lower();
-          vTaskDelay(100);
-        }
-        lcd.DisplayOff();
-        lcd.Sleep();
-        touchPanel.Sleep();
-        state = States::Idle;
+        //brightnessController.Backup();
+        //while(brightnessController.Level() != Controllers::BrightnessController::Levels::Off) {
+        //  brightnessController.Lower();
+        //  vTaskDelay(100);
+        //}
+        //lcd.DisplayOff();
+        //lcd.Sleep();
+        //touchPanel.Sleep();
+        //state = States::Idle;
         break;
       case Messages::GoToRunning:
         lcd.Wakeup();
