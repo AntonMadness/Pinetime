@@ -110,7 +110,7 @@ Clock::Clock(DisplayApp* app,
   label_date = lv_label_create(lv_scr_act(), NULL);
 
   lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 60);
-
+/*
   pixelcat.header.always_zero = 0;                        //Initialization
   pixelcat.header.w = 48;                                 // Setting the Width (or) Horizontal length of the image (number of px)
   pixelcat.header.h = 64;                                 // Setting the Height (or) vertical length of the image (number of px)
@@ -121,7 +121,7 @@ Clock::Clock(DisplayApp* app,
   lv_img_set_src(img_src, &pixelcat);                     // Set the created file as image (<name>)
 
   lv_obj_set_pos(img_src, lv_scr_act*(), LV_ALIGN_IN_RIGHT_MID, 0, 0)
-
+*/
   label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
   lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_TOP_LEFT, 0, 0);
