@@ -613,8 +613,8 @@ var wasmMemory;
 // so this creates a (non-native-wasm) table for us.
 
 var wasmTable = new WebAssembly.Table({
-  'initial': 48,
-  'maximum': 48,
+  'initial': 50,
+  'maximum': 50,
   'element': 'anyfunc'
 });
 
@@ -1229,10 +1229,10 @@ function updateGlobalBufferAndViews(buf) {
   Module['HEAPF64'] = HEAPF64 = new Float64Array(buf);
 }
 
-var STACK_BASE = 5730768,
+var STACK_BASE = 5737328,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 487888,
-    DYNAMIC_BASE = 5730768;
+    STACK_MAX = 494448,
+    DYNAMIC_BASE = 5737328;
 
 assert(STACK_BASE % 16 === 0, 'stack must start aligned');
 assert(DYNAMIC_BASE % 16 === 0, 'heap must start aligned');
