@@ -102,8 +102,9 @@ Clock::Clock(DisplayApp* app,
   pixelcat.data = pixelcat_map;                           // Maps the Image data to the Array
   lv_obj_t *img_src = lv_img_create(lv_scr_act(), NULL);  // Create an image object
   lv_img_set_src(img_src, &pixelcat);                     // Set the created file as image (<name>)
+  lv_obj_align(img_src, lv_scr_act(), LV_ALIGN_OUT_LEFT_MID, 0, 0);                                              
 
-  lv_obj_set_pos(img_src, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 0);                                             
+  //lv_obj_set_pos(img_src, lv_scr_act(), LV_ALIGN_IN_RIGHT_MID, 0, 0);                                             
                                              
   batteryIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(batteryIcon, Symbols::batteryFull);
